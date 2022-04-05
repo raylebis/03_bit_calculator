@@ -3,29 +3,35 @@
 
 def user_choice():
 
+    # Lists of valid responses
+    text_ok = ["text", "t", "txt"]
+    integer_ok = ["Integer", "int", "#", "number"] 
+    image_ok = ["Image", "img", "I", "pix", "picture", "pic"]
+   
     valid = False
     while not valid:
+
+        # ask user for choice and change response to lowercase
         response = input("File type (integer / text / image): ").lower()
-        
-        # If they chose "t" or "text" or "txt"
-        text_ok = ["Text", "t", "txt"]
+
+        # Checks for valid response and returns text, integer or image
+
         if response in text_ok:
             return "text"
-
-        else:
-            print("Please choose a valid file type!")
-            print()
-        # If they chose integer
-        int_ok = ["Integer", "Int", "I"]
-        if response in int_ok:
+            
+        elif response in integer_ok:
             return "integer"
+        elif response in image_ok:
+            return "image"
 
-        # If they chose image
-        image_ok = ["Image", "Img", "I"]
-        if response in image_ok:
-            return "Image"
-
+        elif response == "i":
+            want_integer = input("Press <enter> for an integer or any key for an image")
+            if want_integer == "":
+                return "integer"
+            else:
+                return "image"
         
+            
 # Main routine goes here
 keep_going = ""
 while keep_going == "":
