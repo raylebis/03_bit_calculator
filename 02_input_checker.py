@@ -21,6 +21,7 @@ def user_choice():
             
         elif response in integer_ok:
             return "integer"
+            
         elif response in image_ok:
             return "image"
 
