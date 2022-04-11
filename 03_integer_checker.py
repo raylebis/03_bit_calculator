@@ -1,5 +1,4 @@
 # Checks if user has entered an integer that is more than zero
-from traceback import print_stack
 
 
 def num_check(question, low):
@@ -9,6 +8,7 @@ def num_check(question, low):
 
         error = "Please enter a number that is more than zero "
         "(or equal to) {}".format(low)
+        print()
 
         try:
 
@@ -34,8 +34,8 @@ while keep_going == "":
     var_integer = num_check("Enter Integer: ", 0)
     print()
     # asks to enter a number more than or equal to 1
-    image_width = num_check("Enter Width: ", 1)
+    image_width = num_check("Enter Image Width: ", 1)
     print()
-    image_height = num_check("Enter Height: ", 1)
+    image_height = num_check("Enter Image Height: ", 1)
     print()
     
