@@ -25,6 +25,7 @@ def num_check(question, low):
         except ValueError:
             print(error)
 
+
 # finds # of bits for 24 bit colour
 def image_bits():
 
@@ -32,19 +33,14 @@ def image_bits():
     print()
     image_width = num_check("Enter Image Width: ", 1)
     
-    pixels = image_width * image_height
-    bits = pixels * 24
+    num_pixels = image_width * image_height
+    num_bits = num_pixels * 24
 
     print()
-    print("The # of pixels for your height and width is {}".format(pixels))
-    print("The number of bits is {}".format(bits))
+    print("The # of pixels = {} x {} = {}".format(image_height, image_width, num_pixels))
+    print("The # of bits = {} x 24 = {}".format(num_pixels, num_bits))
 
     return ""
 
 image_bits()
-
-    
-
-
-    
 
